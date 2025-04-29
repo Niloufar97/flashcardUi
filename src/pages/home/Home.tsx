@@ -1,4 +1,4 @@
-import LogoImg from '../../assets/images/logosm.jpg'
+import LogoImg from '../../assets/images/logo-removebg-sm.png'
 import './home.css'
 function Home() {
     return (

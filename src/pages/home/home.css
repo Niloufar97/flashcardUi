@@ -1,11 +1,13 @@
 .home-container{
     height: 100dvh;
+    background-color: var(--soft-bg);
 }
 h1{
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-heading);
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 700 !important;
     font-style: normal;
+    color: var(--prmairy-blue) !important;
 }
 .logo-container{
     max-width: 90%;

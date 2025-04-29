@@ -1,0 +1,12 @@
+:root {
+    /* Colors */
+    --prmairy-blue: #012e4f;
+    --hover-blue: #01456f;
+    --secondary-orange: #fa8b31;
+    --hover-orange: #ffd89e;
+    --soft-bg: #f4f4f9;
+    --neutral-gray: #6c757d;
+
+     /* Fonts */
+     --font-heading: 'Playfair Display', serif;
+}
