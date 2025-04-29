@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import LogoImg from '../../assets/images/logo-removebg-sm.png'
 import './home.css'
 function Home() {
@@ -9,8 +10,13 @@ function Home() {
                 </div>
                 <h1>Welcome to CardCrafter</h1>
                 <div className='d-flex gap-3 flex-column btns' >
-                    <button className="btn btn-primary" type="button">Go to Library</button>
-                    <button className="btn btn-outline-primary" type="button">Create New Set</button>
+                    <Link to='/library' className="btn btn-primary btn-lg w-100">
+                        Go to Library
+                    </Link>
+                    <Link to='/generate-card' className="btn btn-outline-primary btn-lg ">
+                        Create New Set
+                    </Link>
+
                 </div>
             </div>
         </>
