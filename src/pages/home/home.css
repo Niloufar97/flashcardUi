@@ -1,0 +1,44 @@
+.home-container{
+    height: 100dvh;
+}
+h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.logo-container{
+    max-width: 90%;
+    width: 500px;
+    aspect-ratio: 972 / 624;
+}
+.logo-container img{
+    width: 100%;
+    height: auto; 
+    display: block;
+    object-fit: contain;
+}
+
+.btns {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  @media (min-width: 576px) {
+    .btns {
+      width: 75%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .btns {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .btns {
+      width: 25%;
+    }
+  }
