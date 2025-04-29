@@ -9,11 +9,11 @@ function Home() {
                     <img src={LogoImg} alt="logo-cardCrafter" />
                 </div>
                 <h1>Welcome to CardCrafter</h1>
-                <div className='d-flex gap-3 flex-column btns' >
-                    <Link to='/library' className="btn btn-primary btn-lg w-100">
+                <div className='d-flex gap-4 flex-column btns' >
+                    <Link to='/library' className="btn btn-primary-blue btn-lg w-100">
                         Go to Library
                     </Link>
-                    <Link to='/generate-card' className="btn btn-outline-primary btn-lg ">
+                    <Link to='/generate-card' className="btn btn-secondary-outline-orange btn-lg ">
                         Create New Set
                     </Link>
 

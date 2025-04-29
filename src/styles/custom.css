@@ -10,3 +10,19 @@
      /* Fonts */
      --font-heading: 'Playfair Display', serif;
 }
+.btn-primary-blue{
+    background-color: var(--prmairy-blue);
+    color: #f4f4f9;
+}
+.btn-primary-blue:hover{
+    background-color: var(--hover-blue);
+    color: #f4f4f9;
+}
+.btn-secondary-outline-orange{
+    border:1px solid var(--secondary-orange);
+    color: var(--secondary-orange);
+}
+.btn-secondary-outline-orange:hover{
+    background-color: var(--hover-orange);
+    color: var(--prmairy-blue);
+}
