@@ -10,6 +10,13 @@
      /* Fonts */
      --font-heading: 'Playfair Display', serif;
 }
+@font-face {
+    font-family: 'Playfair';
+    src: url('../assets/fonts/playfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;   
+  }
+
 .btn-primary-blue{
     background-color: var(--prmairy-blue);
     color: #f4f4f9;
@@ -25,4 +32,9 @@
 .btn-secondary-outline-orange:hover{
     background-color: var(--hover-orange);
     color: var(--prmairy-blue);
+}
+.title1{
+    font-family: 'playfair', serif;
+    color: var(--prmairy-blue);
+    font-size: 2.5rem;
 }

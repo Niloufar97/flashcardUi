@@ -8,7 +8,7 @@ function Home() {
                 <div className='logo-container'>
                     <img src={LogoImg} alt="logo-cardCrafter" />
                 </div>
-                <h1>Welcome to CardCrafter</h1>
+                <h1 className='title1'>Welcome to CardCrafter</h1>
                 <div className='d-flex gap-4 flex-column btns' >
                     <Link to='/library' className="btn btn-primary-blue btn-lg w-100">
                         Go to Library

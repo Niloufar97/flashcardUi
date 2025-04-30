@@ -2,13 +2,13 @@
     height: 100dvh;
     background-color: var(--soft-bg);
 }
-h1{
+/* h1{
     font-family: var(--font-heading);
     font-optical-sizing: auto;
     font-weight: 700 !important;
     font-style: normal;
     color: var(--prmairy-blue) !important;
-}
+} */
 .logo-container{
     max-width: 90%;
     width: 500px;
