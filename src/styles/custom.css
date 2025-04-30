@@ -10,6 +10,14 @@
      /* Fonts */
      --font-heading: 'Playfair Display', serif;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--soft-bg);
+}
 @font-face {
     font-family: 'Playfair';
     src: url('../assets/fonts/playfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
@@ -37,4 +45,9 @@
     font-family: 'playfair', serif;
     color: var(--prmairy-blue);
     font-size: 2.5rem;
+}
+.title2{
+    font-family: 'playfair', serif;
+    color: var(--prmairy-blue);
+    font-size: 1.5rem;
 }

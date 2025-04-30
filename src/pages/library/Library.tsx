@@ -1,32 +1,50 @@
-import './library.module.css'
+import './library.css'
 import { ItopicArray } from "../../models/topicModels"
 import useSWR from "swr"
+import { Card } from 'react-bootstrap'
+import staticImg from "../../assets/images/p-searching.png"
+import Navbar from '../../components/nav/Navbar'
+import { Link } from 'react-router'
 
-const fetcher = async(url: string) => {
+const fetcher = async (url: string) => {
     const response = await fetch(url)
-    if(!response.ok){
+    if (!response.ok) {
         throw new Error("Failed to fetch data")
     }
     return response.json()
 }
 
-export default function Library(){
-    const {data: topics} = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
+export default function Library() {
+    const { data: topics } = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
 
-    return(
+    return (
         <>
-            <h1>Your Topics</h1>
-            <ul>
-               {
-                topics?.map((topic, index) => {     
-                    return (
-                        <li key={index}>
-                            <h2>{topic.topicName}</h2>
-                        </li>   
-                    )
-                })
-               }
-            </ul>
+        <Navbar/>
+        <div className="library-container">
+            <h1 className='title1'>Your Library</h1>
+            <div className="library-list-wrapper">
+            <div className='library-list'>
+                {
+                    topics?.map((topic, index) => {
+                        return (
+                            <>
+                            <Card className='card' key={index}>
+                                <Card.Img variant="top" src={staticImg}  className='topic-img'/>
+                                <Card.Body>
+                                    <Card.Title className='topic-name'>{topic.topicName.toLocaleUpperCase()}</Card.Title>
+                                    <Link to={`/library/${topic.id}`} className="btn btn-secondary-outline-orange btn-lg w-50 mb-3">
+                                        View Topic
+                                    </Link>
+                                </Card.Body>
+                            </Card>
+                            </>
+                        )
+                    })
+                }
+            </div>
+            </div>
+            
+        </div>
         </>
     )
 }

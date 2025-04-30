@@ -9,7 +9,7 @@ function App() {
     <Routes>  
       <Route path='/' element={<Home/>}></Route>
       <Route path='/library' element={<Library/>}></Route>
-      <Route path='/generate-card' element={<GenerateFlashcard/>}></Route>
+      <Route path='/create' element={<GenerateFlashcard/>}></Route>
     </Routes>
   )
 }
