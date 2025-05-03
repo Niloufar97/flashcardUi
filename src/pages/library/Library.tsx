@@ -29,11 +29,12 @@ export default function Library() {
                         return (
                             <>
                             <Card className='card' key={index}>
-                                <Card.Img variant="top" src={staticImg}  className='topic-img'/>
+                                <Card.Img variant="top" src={topic.iconUrl? topic.iconUrl : staticImg }  className='topic-img'/>
                                 <Card.Body>
                                     <Card.Title className='topic-name'>{topic.topicName.toLocaleUpperCase()}</Card.Title>
-                                    <Link to={`/library/${topic.id}`} className="btn btn-secondary-outline-orange btn-lg w-50 mb-3">
-                                        View Topic
+                                    <p>({["Easy", "Medium", "Hard"][topic.level - 1]})</p>
+                                    <Link to={`/library/${topic.id}`} className="btn btn-primary-blue btn-lg w-50 mb-3">
+                                        View Cards
                                     </Link>
                                 </Card.Body>
                             </Card>
