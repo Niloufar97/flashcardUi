@@ -19,33 +19,37 @@ export default function Library() {
 
     return (
         <>
-        <Navbar/>
+        <Navbar />
         <div className="library-container">
-            <h1 className='title1'>Your Library</h1>
-            <div className="library-list-wrapper">
-            <div className='library-list'>
-                {
-                    topics?.map((topic, index) => {
-                        return (
-                            <>
-                            <Card className='card' key={index}>
-                                <Card.Img variant="top" src={topic.iconUrl? topic.iconUrl : staticImg }  className='topic-img'/>
-                                <Card.Body>
-                                    <Card.Title className='topic-name'>{topic.topicName.toLocaleUpperCase()}</Card.Title>
-                                    <p>({["Easy", "Medium", "Hard"][topic.level - 1]})</p>
-                                    <Link to={`/library/${topic.id}`} className="btn btn-primary-blue btn-lg w-50 mb-3">
-                                        View Cards
-                                    </Link>
-                                </Card.Body>
-                            </Card>
-                            </>
-                        )
-                    })
-                }
+          <h1 className="title1">Your Library</h1>
+          <div className="library-list-wrapper">
+            <div className="library-list">
+              {topics?.map((topic) => (
+                <Card className="library-card" key={topic.id}>
+                  <Card.Img
+                    variant="top"
+                    src={topic.iconUrl || staticImg}
+                    className="topic-img"
+                  />
+                  <Card.Body>
+                    <Card.Title className="topic-name">
+                      {topic.topicName.toUpperCase()}
+                    </Card.Title>
+                    <p className="topic-level">
+                      {["Easy", "Medium", "Hard"][topic.level - 1]}
+                    </p>
+                    <Link
+                      to={`/library/${topic.id}`}
+                      className="btn btn-primary-blue view-btn"
+                    >
+                      View Cards
+                    </Link>
+                  </Card.Body>
+                </Card>
+              ))}
             </div>
-            </div>
-            
+          </div>
         </div>
-        </>
+      </>      
     )
 }
