@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import LogoImg from '../../assets/images/logo-removebg-sm.png'
+import LogoImg from '../../assets/images/homeLogo.png'
 import './home.css'
 function Home() {
     return (
@@ -13,7 +13,7 @@ function Home() {
                     <Link to='/library' className="btn btn-primary-blue btn-lg w-100">
                         Go to Library
                     </Link>
-                    <Link to='/generate-card' className="btn btn-secondary-outline-orange btn-lg ">
+                    <Link to='/create' className="btn btn-secondary-outline-orange btn-lg ">
                         Create New Set
                     </Link>
 
