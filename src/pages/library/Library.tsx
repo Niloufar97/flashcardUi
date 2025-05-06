@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap'
 import staticImg from "../../assets/images/p-searching.png"
 import Navbar from '../../components/nav/Navbar'
 import { Link } from 'react-router'
+import NotFound from '../../components/not-found/NotFound'
 
 const fetcher = async (url: string) => {
     const response = await fetch(url)
@@ -15,7 +16,8 @@ const fetcher = async (url: string) => {
 }
 
 export default function Library() {
-    const { data: topics } = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
+    const { data: topics, error} = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
+    if (error) return <NotFound/>
 
     return (
         <>

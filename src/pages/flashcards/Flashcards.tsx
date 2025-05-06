@@ -5,6 +5,7 @@ import useSWR from "swr"
 import staticImg from "../../assets/images/p-searching.png"
 import Iflashcard from "../../models/flashcardModels"
 import "./flashcards.css"
+import NotFound from "../../components/not-found/NotFound"
 
 const fetcher = async (url: string) => {
   const response = await fetch(url)
@@ -23,7 +24,7 @@ function Flashcards() {
   const { data : FData , error , isLoading} = useSWR(url, fetcher)
 
   if (isLoading) return <p>Loading flashcards...</p>
-  if (error) return <p>Error loading flashcards: {error.message}</p>
+  if (error) return <NotFound/>
   if (!FData) return <p>No flashcards found.</p>
 
   return (

@@ -1,0 +1,17 @@
+@media (max-width: 576px) {
+    .container{
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container img{
+        width: 90%;
+    }
+    .container h2, h1{
+        font-size: 1.5rem;
+    }
+}
+  

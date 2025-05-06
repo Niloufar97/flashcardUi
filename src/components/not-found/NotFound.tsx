@@ -4,7 +4,7 @@ import './not-found.css'
 
 function NotFound() {
   return (
-    <div className='d-flex flex-column align-items-center justify-content-center vh-100 gap-3'>
+    <div className='d-flex flex-column align-items-center justify-content-center vh-100 gap-3 text-center container'>
       <img src={notFoundImage}></img>
       <h1 className='title1'>404</h1>
       <h2 className='title1'>Sorry, We couldn’t find what you’re looking for.</h2>
