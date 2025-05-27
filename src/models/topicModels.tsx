@@ -1,7 +1,7 @@
 export interface Itopic {
     id: number
     topicName: string
-    flashcards: string[] | null
+    flashcardCount: number | null
     iconUrl: string | null
     level: number 
 }

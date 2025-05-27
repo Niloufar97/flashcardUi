@@ -2,7 +2,7 @@ import './library.css'
 import { ItopicArray } from "../../models/topicModels"
 import useSWR from "swr"
 import { Card } from 'react-bootstrap'
-import staticImg from "../../assets/images/p-searching.png"
+import staticImg from "../../assets/images/searching.png"
 import Navbar from '../../components/nav/Navbar'
 import { Link } from 'react-router'
 import NotFound from '../../components/not-found/NotFound'
@@ -38,7 +38,7 @@ export default function Library() {
                       {topic.topicName.toUpperCase()}
                     </Card.Title>
                     <p className="topic-level">
-                      {["Easy", "Medium", "Hard"][topic.level - 1]}
+                      {["Easy", "Medium", "Hard"][topic.level - 1]} - {topic.flashcardCount} (Flashcards)
                     </p>
                     <Link
                       to={`/library/${topic.id}`}
