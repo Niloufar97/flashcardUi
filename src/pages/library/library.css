@@ -69,4 +69,83 @@
     border-radius: 8px;
     font-size: 1rem;
   }
-  
+/* menu */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.action-menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+}
+
+.dots {
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.4rem;
+  border-radius: 12px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dots:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.actions {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.action-menu:hover .actions {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  color: #333;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Color hints */
+.icon-btn.favorite:hover {
+  color: #e63946;
+}
+
+.icon-btn.edit:hover {
+  color: #0077ff;
+}
+
+.icon-btn.delete:hover {
+  color: #ff5a5f;
+}
