@@ -4,6 +4,7 @@ import useSWR, { mutate } from "swr"
 import Navbar from '../../components/nav/Navbar'
 import NotFound from '../../components/not-found/NotFound'
 import TopicCard from './TopicCard'
+import Loading from '../../components/loading/Loading'
 
 const fetcher = async (url: string) => {
   const response = await fetch(url)
@@ -26,8 +27,9 @@ export default function Library() {
   }
 
   // Fetch topics from the API
-  const { data: topics, error } = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
+  const { data: topics,isLoading , error } = useSWR<ItopicArray>("https://localhost:7256/topic", fetcher)
   if (error) return <NotFound />
+  if (isLoading) return <Loading />
 
   return (
     <>
